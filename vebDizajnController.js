@@ -11,6 +11,14 @@ router.post('/register', (req, res) =>{
     users.push({username, password});
     res.json({success: true}); 
 });
+router.post('/login', (req, res) =>
+    {
+        const {username, password} = req.body;
+        const user = users.find(user => user.username === username);
+        if(!user) return res.json({success: false, message: "User not found"});
+        if(user.password !== password) return res.json({success: false, message: "Wrong password"});
+        res.json({success: true, message: "Welcome back, " + username});
+    });
 
 // Endpoint: Horoskop
 router.get('/horoskop', (req, res) => {
