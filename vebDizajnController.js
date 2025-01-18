@@ -293,90 +293,258 @@ router.get('/plan-ishrane', (req, res) => {
 
 router.get('/letovi', (req, res) => {
     const datum = req.query.datum;
-    const letovi = [
-        "Beograd - Pariz",
-        "Beograd - London",
-        "Beograd - Rim",
-        "Beograd - Berlin",
-        "Beograd - Madrid",
-        "Beograd - Pariz",
-        "Beograd - London",
-        "Beograd - Rim",
-        "Beograd - Berlin",
-        "Beograd - Madrid",
-        "Beograd - Pariz",
-        "Beograd - London",
-        "Beograd - Rim",
-        "Beograd - Berlin",
-        "Beograd - Madrid",
-        "Beograd - Pariz",
-        "Beograd - London",
-        "Beograd - Rim",
-        "Beograd - Berlin",
-        "Beograd - Madrid",
-        "Beograd - Pariz",
-        "Beograd - London",
-        "Beograd - Rim",
-        "Beograd - Berlin",
-        "Beograd - Madrid",
-        "Beograd - Pariz",
-        "Beograd - London",
-        "Beograd - Rim",
-        "Beograd - Berlin",
-        "Beograd - Madrid",
-        "Beograd - Pariz",
-        "Beograd - London",
-        "Beograd - Rim",
-        "Beograd - Berlin",
-        "Beograd - Madrid",
-        "Beograd - Pariz",
-        "Beograd - London",
-        "Beograd - Rim",
-        "Beograd - Berlin",
-        "Beograd - Madrid",
-        "Beograd - Pariz",
-        "Beograd - London",
-        "Beograd - Rim",
-        "Beograd - Berlin",
-        "Beograd - Madrid",
-        "Beograd - Pariz",
-        "Beograd - London",
-        "Beograd - Rim",
-        "Beograd - Berlin",
-        "Beograd - Madrid"
-    ];
+    const letovi = 
+       [
+        {
+        vreme: "08:00",
+        destinacija: "Beograd - Pariz",
+        let: "JU 365",
+        status: "Na vreme",
+        datum: "20.1.2025"
+       },
+        {
+          vreme: "10:00",
+          destinacija: "Beograd - London",
+          let: "JU 367",
+          status: "Na vreme",
+          datum: "20.1.2025"
+        },
+        {
+          vreme: "12:00",
+          destinacija: "Beograd - Rim",
+          let: "JU 369",
+          status: "Na vreme",
+          datum: "20.1.2025"
+        },
+        {
+          vreme: "14:00",
+          destinacija: "Beograd - Berlin",
+          let: "JU 371",
+          status: "Na vreme",
+          datum: "20.1.2025"
+        },
+        {
+          vreme: "16:00",
+          destinacija: "Beograd - Madrid",
+          let: "JU 373",
+          status: "Na vreme",
+          datum: "20.1.2025"
+        },
+        {
+          vreme: "18:00",
+          destinacija: "Beograd - Istanbul",
+          let: "JU 375",
+          status: "Na vreme",
+          datum: "20.1.2025"
+        },
+        {
+          vreme: "20:00",
+          destinacija: "Beograd - Moskva",
+          let: "JU 377",
+          status: "Na vreme",
+          datum: "20.1.2025"
+        },
+        {
+          vreme: "22:00",
+          destinacija: "Beograd - Atina",
+          let: "JU 379",
+          status: "Na vreme",
+          datum: "20.1.2025"
+        },
+        {
+          vreme: "08:00",
+          destinacija: "Beograd - Ljubljana",
+          let: "JU 381",
+          status: "Kasni 30 minuta",
+          datum: "21.1.2025"
+        },
+        {
+          vreme: "10:00",
+          destinacija: "Beograd - Zagreb",
+          let: "JU 383",
+          status: "Kasni 30 minuta",
+          datum: "21.1.2025"
+        },
+        {
+          vreme: "12:00",
+          destinacija: "Beograd - Sarajevo",
+          let: "JU 385",
+          status: "Kasni 30 minuta",
+          datum: "21.1.2025"
+        },
+        {
+          vreme: "14:00",
+          destinacija: "Beograd - Podgorica",
+          let: "JU 387",
+          status: "Kasni 30 minuta",
+          datum: "21.1.2025"
+        },
+        {
+          vreme: "16:00",
+          destinacija: "Beograd - Tirana",
+          let: "JU 389",
+          status: "Kasni 30 minuta",
+          datum: "21.1.2025"
+        },
+        {
+          vreme: "18:00",
+          destinacija: "Beograd - Skoplje",
+          let: "JU 391",
+          status: "Kasni 30 minuta",
+          datum: "21.1.2025"
+        },
+        {
+          vreme: "20:00",
+          destinacija: "Beograd - Sofija",
+          let: "JU 393",
+          status: "Kasni 30 minuta",
+          datum: "21.1.2025"
+        },
+        {
+          vreme: "22:00",
+          destinacija: "Beograd - Budimpešta",
+          let: "JU 395",
+          status: "Kasni 30 minuta",
+          datum: "21.1.2025"
+        },
+        {
+          vreme: "08:00",
+          destinacija: "Beograd - Bec",
+          let: "JU 397",
+          status: "Otkazan",
+          datum: "22.1.2025"
+        },
+        {
+          vreme: "10:00",
+          destinacija: "Beograd - Cirih",
+          let: "JU 399",
+          status: "Otkazan",
+          datum: "22.1.2025"
+        },
+        {
+          vreme: "12:00",
+          destinacija: "Beograd - Minhen",
+          let: "JU 401",
+          status: "Otkazan",
+          datum: "22.1.2025"
+        },
+        {
+          vreme: "14:00",
+          destinacija: "Beograd - Frankfurt",
+          let: "JU 403",
+          status: "Otkazan",
+          datum: "22.1.2025"
+        },
+        {
+          vreme: "16:00",
+          destinacija: "Beograd - Pariz",
+          let: "JU 405",
+          status: "Otkazan",
+          datum: "22.1.2025"
+        },
+        {
+          vreme: "18:00",
+          destinacija: "Beograd - London",
+          let: "JU 407",
+          status: "Otkazan",
+          datum: "22.1.2025"
+        },
+        {
+          vreme: "20:00",
+          destinacija: "Beograd - Rim",
+          let: "JU 409",
+          status: "Otkazan",
+          datum: "22.1.2025"
+        },
+        {
+          vreme: "22:00",
+          destinacija: "Beograd - Berlin",
+          let: "JU 411",
+          status: "Otkazan",
+          datum: "22.1.2025"
+        },
+        {
+          vreme: "08:00",
+          destinacija: "Beograd - Madrid",
+          let: "JU 413",
+          status: "Otkazan",
+          datum: "22.1.2025"
+        },
+        {
+          vreme: "10:00",
+          destinacija: "Beograd - Istanbul",
+          let: "JU 415",
+          status: "Otkazan",
+          datum: "22.1.2025"
+        }
+       ];
+      
     res.json(letovi);
 });
 
 router.get('/internet-usluge', (req, res) => {
-    const internetUsluge = [
-        "Paket 1: 100mbps - 1000din",
-        "Paket 2: 200mbps - 2000din",
-        "Paket 3: 300mbps - 3000din",
-        "Paket 4: 400mbps - 4000din",
-        "Paket 5: 500mbps - 5000din",
-        "Paket 6: 600mbps - 6000din",
-        "Paket 7: 700mbps - 7000din",
-        "Paket 8: 800mbps - 8000din",
-        "Paket 9: 900mbps - 9000din",
-        "Paket 10: 1000mbps - 10000din",
-        "Paket 11: 1100mbps - 11000din",
-        "Paket 12: 1200mbps - 12000din",
-        "Paket 13: 1300mbps - 13000din",
-        "Paket 14: 1400mbps - 14000din",
-        "Paket 15: 1500mbps - 15000din",
-        "Paket 16: 1600mbps - 16000din",
-        "Paket 17: 1700mbps - 17000din",
-        "Paket 18: 1800mbps - 18000din",
-        "Paket 19: 1900mbps - 19000din",
-        "Paket 20: 2000mbps - 20000din",
-        "Paket 21: 2100mbps - 21000din",
-        "Paket 22: 2200mbps - 22000din",
-        "Paket 23: 2300mbps - 23000din",
-        "Paket 24: 2400mbps - 24000din",
-        "Paket 25: 2500mbps - 25000din",
-        "Paket 26: 2600mbps - 26000din"
-    ];
+    const internetUsluge = {
+      "SOLO": [
+        {
+          "name": "Starter",
+          "speed": "100 Mbps",
+          "price": "1,299 RSD / mesečno"
+        },
+        {
+          "name": "Plus",
+          "speed": "300 Mbps",
+          "price": "1,499 RSD / mesečno"
+        },
+        {
+          "name": "Premium",
+          "speed": "500 Mbps",
+          "price": "1,999 RSD / mesečno"
+        }
+      ],
+      "DUO": [
+        {
+          "name": "Starter",
+          "speed": "300 Mbps",
+          "tv_channels": "300",
+          "price": "1,999 RSD / mesečno"
+        },
+        {
+          "name": "Plus",
+          "speed": "500 Mbps",
+          "tv_channels": "500",
+          "price": "2,499 RSD / mesečno"
+        },
+        {
+          "name": "Premium",
+          "speed": "750 Mbps",
+          "tv_channels": "750",
+          "price": "2,999 RSD / mesečno"
+        }
+      ],
+      "TRIO": [
+        {
+          "name": "Starter",
+          "speed": "500 Mbps",
+          "tv_channels": "500",
+          "minutes": "500",
+          "price": "2,999 RSD / mesečno"
+        },
+        {
+          "name": "Plus",
+          "speed": "750 Mbps",
+          "tv_channels": "750",
+          "minutes": "1000",
+          "price": "3,499 RSD / mesečno"
+        },
+        {
+          "name": "Premium",
+          "speed": "1 Gbps",
+          "tv_channels": "1000",
+          "minutes": "Neograničeno",
+          "price": "3,999 RSD / mesečno"
+        }
+      ]
+    };
     res.json(internetUsluge);
 });
 
