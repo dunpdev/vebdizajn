@@ -550,11 +550,9 @@ router.get('/internet-usluge', (req, res) => {
 
 router.get('/ucenje-engleskog', (req, res) => {
     const kartice = [
-        "https://www.pexels.com/photo/short-coated-tan-dog-33534/",
-        "https://www.pexels.com/photo/short-coated-tan-dog-33534/",
-        "https://www.pexels.com/photo/short-coated-tan-dog-33534/",
-        "https://www.pexels.com/photo/short-coated-tan-dog-33534/",
-        "https://www.pexels.com/photo/short-coated-tan-dog-33534/"
+        {"word":"apple","image":"https://previews.123rf.com/images/blueringmedia/blueringmedia2204/blueringmedia220402555/184758767-education-word-card-of-english-opposites-word-illustration.jpg"},
+        {"word":"coffee","image":"https://img.freepik.com/free-vector/education-word-card-english-opposites-word_1308-96997.jpg"},
+        {"word":"jump","image":"https://img.freepik.com/free-vector/education-word-card-english-opposites-word_1308-111677.jpg"},
     ];
     res.json(kartice);
 });
