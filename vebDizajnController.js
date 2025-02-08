@@ -6479,7 +6479,7 @@ router.get('/vak', (req, res) => {
     ikindija: r.ikindija,
     aksam: r.aksam,
     jacija: r.jacija,
-    hadis: "Od Abdullaha ibn 'Amra, radijallahu anhuma, se prenosi da je Allahov Poslanik, sallallahu alejhi ve sellem, rekao:\r\n\"Svi ste vi pastiri, i svaki pastir bit će odgovoran za svoje stado. Vladar je pastir i odgovoran je za svoje stado, čovjek je pastir svojoj porodici i odgovoran je za svoje stado, žena je pastirica u kući svoga muža i odgovorna je za svoje stado, i sluga je pastir imetku svoga gospodara i odgovoran je za svoje stado. Svi ste vi, dakle, pastiri i svi ste odgovorni za svoje stado.\""
+    hadis: "\"A vjernicima je propisano da u određeno vrijeme namaz obavljaju.\" (An-Nisa, 103)"
   };
   res.json(resp);
 });
