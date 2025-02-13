@@ -6472,7 +6472,8 @@ router.get('/vak', (req, res) => {
   var r = transformData(vaktija, today.getMonth(), today.getDate());
 
   let resp = {
-    sabah: "6:15",
+    sabah: "6:00",
+    sabahS: "6:00",
     zora: r.zora,
     izlazak: r.izlazak,
     podne: r.podne,
