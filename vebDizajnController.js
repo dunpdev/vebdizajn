@@ -6473,7 +6473,8 @@ router.get('/vak', (req, res) => {
 
   let resp = {
     sabah: "5:45",
-    sabahS: "6:00",
+    sabahS: "5:45",
+    sabahC: "5:45",
     zora: r.zora,
     izlazak: r.izlazak,
     podne: r.podne,
