@@ -6474,10 +6474,15 @@ router.get('/vak', (req, res) => {
   const ezan = new Date(today.getFullYear(), today.getMonth(), today.getDate(), zora[0], zora[1]);
   // add 5 minutes to ezan
   ezan.setMinutes(ezan.getMinutes() + 20);
+  const izlazak = r.izlazak.split(":");
+  const ezanE = new Date(today.getFullYear(), today.getMonth(), today.getDate(), izlazak[0], izlazak[1]);
+  // add 5 minutes to ezan
+  ezanE.setMinutes(ezanE.getMinutes() - 40);
   let resp = {
     sabah: `${ezan.getHours()}:${ezan.getMinutes().toString().padStart(2, "0")}`,
     sabahS: `${ezan.getHours()}:${ezan.getMinutes().toString().padStart(2, "0")}`,
     sabahC: `${ezan.getHours()}:${ezan.getMinutes().toString().padStart(2, "0")}`,
+    sabahE: `${ezanE.getHours()}:${ezanE.getMinutes().toString().padStart(2, "0")}`,
     zora: r.zora,
     izlazak: r.izlazak,
     podne: r.podne,
