@@ -6479,6 +6479,7 @@ router.get('/vak', (req, res) => {
   // add 5 minutes to ezan
   ezanE.setMinutes(ezanE.getMinutes() - 40);
   let resp = {
+    hadisi: ["\"A vjernicima je propisano da u određeno vrijeme namaz obavljaju.\" (An-Nisa, 103)","Prenosi se od Omera ibnul Hattaba, radijallahu anhu, da je Allahov Poslanik, sallallahu 'alejhi ve sellem, rekao: \"Allah vam zabranjuje da se zaklinjete vašim očevima!\" Omer je kazao: \"Tako mi Allaha, otkako sam čuo da je to rekao Allahov Poslanik nisam se precima svojim zakleo, ni sam od sebe, ni prenoseći od drugih.\"","Ebu Hurejre, radijallahu anhu, prenosi da je Allahov Poslanik, sallallahu 'alejhi ve sellem, rekao: \"Svakog dana čovjek je dužan podijeliti sadaku za svaki zglob svoga tijela: da pravedno presudiš između dvojice je sadaka, pomoći čovjeku da uzjaše jahalicu, i pomoći mu da na nju natovari teret je sadaka, lijepa riječ je sadaka, svaki korak prema džamiji ubraja se u sadaku, i uklanjanje s puta onoga što smeta prolaznicima jest sadaka.\""],
     sabah: `4:45`,
     sabahS: `4:45`,
     sabahN: `5:00`,
