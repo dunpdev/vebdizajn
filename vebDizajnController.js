@@ -6483,7 +6483,7 @@ router.get('/vak', (req, res) => {
     sabah: `4:15`,
     sabahS: `4:30`,
     sabahN: `4:30`,
-    sabahV: `4:30`,
+    sabahV: `4:15`,
     sabahC: `${ezan.getHours()}:${ezan.getMinutes().toString().padStart(2, "0")}`,
     sabahE: `${ezanE.getHours()}:${ezanE.getMinutes().toString().padStart(2, "0")}`,
     zora: r.zora,
