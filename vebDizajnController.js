@@ -6479,11 +6479,11 @@ router.get('/vak', (req, res) => {
   // add 5 minutes to ezan
   ezanE.setMinutes(ezanE.getMinutes() - 40);
   let resp = {
-    hadisi: ["\"A vjernicima je propisano da u određeno vrijeme namaz obavljaju.\" (An-Nisa, 103)","Prenosi se od Omera ibnul Hattaba, radijallahu anhu, da je Allahov Poslanik, sallallahu 'alejhi ve sellem, rekao: \"Allah vam zabranjuje da se zaklinjete vašim očevima!\" Omer je kazao: \"Tako mi Allaha, otkako sam čuo da je to rekao Allahov Poslanik nisam se precima svojim zakleo, ni sam od sebe, ni prenoseći od drugih.\"","Ebu Hurejre, radijallahu anhu, prenosi da je Allahov Poslanik, sallallahu 'alejhi ve sellem, rekao: \"Svakog dana čovjek je dužan podijeliti sadaku za svaki zglob svoga tijela: da pravedno presudiš između dvojice je sadaka, pomoći čovjeku da uzjaše jahalicu, i pomoći mu da na nju natovari teret je sadaka, lijepa riječ je sadaka, svaki korak prema džamiji ubraja se u sadaku, i uklanjanje s puta onoga što smeta prolaznicima jest sadaka.\""],
     sabah: `4:15`,
     sabahS: `4:15`,
     sabahN: `4:15`,
     sabahV: `4:15`,
+    hadisi: ["\"Ne postoje dani u kojima je činjenje dobrih djela draže Allahu od ovih dana\", misleći na prvih deset dana tog mjeseca. Rekli su ashabi: \"Čak ni borba na Allahovom putu?\" Rekao je: \"Ni borba na Allahovom putu!\" A zatim je nastavio: \"Osim čovjeka koji izađe u borbu na Allahovom putu boreći se svojim tijelom i imetkom, i ne vrati ništa od toga.\" (Buharija); \"Ne postoje veličanstveniji dani kod Allaha, niti dani u kojima su dobra djela draža Allahu od ovih deset dana. Mnogo u njima Allaha spominjite et-tehlilom (izgovarajući riječi la ilahe illallah), et-tekbirom (veličanjem Allaha izgovarajući riječi Allahu ekber), et-tehmidom (zahvalom Allahu riječima elhamdulillah.)\";  Kazao je Allahov Poslanik, kada je bio upitan o postu na Dan Arefata (devetom danu zul-hidždžeta): \"Iskupljuje od grijeha prošlu i narednu godinu.\" (Muslim i dr.)"],
     sabahC: `${ezan.getHours()}:${ezan.getMinutes().toString().padStart(2, "0")}`,
     sabahE: `${ezanE.getHours()}:${ezanE.getMinutes().toString().padStart(2, "0")}`,
     zora: r.zora,
