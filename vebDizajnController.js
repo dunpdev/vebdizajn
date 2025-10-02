@@ -194,6 +194,35 @@ router.get('/knjige', (req, res) => {
     res.json(knjige);
 });
 
+// dodaj endpoint za algoritam pretraga stabla po sirini
+router.get('/pretraga-stabla-po-sirini', (req, res) => {
+    const tree = {
+        value: 1,
+        left: {
+            value: 2,
+            left: { value: 4, left: null, right: null },
+            right: { value: 5, left: null, right: null }
+        },
+        right: {
+            value: 3,
+            left: { value: 6, left: null, right: null },
+            right: { value: 7, left: null, right: null }
+        }
+    };
+
+    const result = [];
+    const queue = [tree];
+
+    while (queue.length > 0) {
+        const node = queue.shift();
+        result.push(node.value);
+        if (node.left) queue.push(node.left);
+        if (node.right) queue.push(node.right);
+    }
+
+    res.json(result);
+});
+
 router.get('/filmovi', (req, res) => {
     const naziv = req.query.naziv;
     let filmovi = [
