@@ -223,6 +223,23 @@ router.get('/pretraga-stabla-po-sirini', (req, res) => {
     res.json(result);
 });
 
+// kreiraj mi endpoint za get metodu koji vraca listu cveca
+router.get('/cvece', (req, res) => {
+    const cvece = [
+        { naziv: "Ruža", boja: "Crvena", miris: "Jak" },
+        { naziv: "Lala", boja: "Žuta", miris: "Slab" },
+        { naziv: "Suncokret", boja: "Žuta", miris: "Nema" },
+        { naziv: "Orhideja", boja: "Ljubičasta", miris: "Slab" },
+        { naziv: "Margarita", boja: "Bela", miris: "Slab" },
+        { naziv: "Ljiljan", boja: "Bela", miris: "Jak" },
+        { naziv: "Gerber", boja: "Narandžasta", miris: "Nema" },
+        { naziv: "Karanfilić", boja: "Roze", miris: "Jak" },
+        { naziv: "Zumbul", boja: "Plava", miris: "Jak" },
+        { naziv: "Frezija", boja: "Bela", miris: "Jak" }
+    ];
+    res.json(cvece);
+});
+
 // kreiraj mi malo kompleksniji endpoint za algoritam pretraga stabla po sirini, vraca svaki korak sta se desava u stablu
 router.get('/pretraga-stabla-po-sirini-koraci', (req, res) => {
     const tree = {
