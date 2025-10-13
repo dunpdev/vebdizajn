@@ -330,6 +330,23 @@ router.get('/filmovi', (req, res) => {
     res.json(filmovi);
 });
 
+// kreiraj mi endpoint za vracanje liste monitora sa cenama i specifikacijama
+router.get('/monitori', (req, res) => {
+    const monitori = [
+        { Id: 1, Naziv: "Dell UltraSharp U2723QE", Cena: "699.99 USD", Specifikacije: "27-inch 4K UHD, IPS, 60Hz, 5ms" },
+        { Id: 2, Naziv: "LG 27GN950-B", Cena: "799.99 USD", Specifikacije: "27-inch 4K UHD, Nano IPS, 144Hz, 1ms" },
+        { Id: 3, Naziv: "ASUS ROG Swift PG32UQX", Cena: "2999.99 USD", Specifikacije: "32-inch 4K UHD, IPS, 144Hz, 4ms" },
+        { Id: 4, Naziv: "Acer Predator X27", Cena: "1999.99 USD", Specifikacije: "27-inch 4K UHD, IPS, 144Hz, 4ms" },
+        { Id: 5, Naziv: "BenQ PD3220U", Cena: "1499.99 USD", Specifikacije: "32-inch 4K UHD, IPS, 60Hz, 4ms" },
+        { Id: 6, Naziv: "Samsung Odyssey G7", Cena: "699.99 USD", Specifikacije: "27-inch QHD, VA, 240Hz, 1ms" },
+        { Id: 7, Naziv: "Eizo ColorEdge CG319X", Cena: "5999.99 USD", Specifikacije: "31-inch 4K UHD, IPS, 60Hz, 9ms" },
+        { Id: 8, Naziv: "ViewSonic VP3268a-4K", Cena: "899.99 USD", Specifikacije: "32-inch 4K UHD, IPS, 60Hz, 5ms" },
+        { Id: 9, Naziv: "HP Z27s", Cena: "499.99 USD", Specifikacije: "27-inch 4K UHD, IPS, 60Hz, 5ms" },
+        { Id: 10, Naziv: "Philips 328P6VJEB", Cena: "599.99 USD", Specifikacije: "32-inch 4K UHD, VA, 60Hz, 4ms" }
+    ];
+    res.json(monitori);
+});
+
 router.get('/kompozicije', (req, res) => {
     const kompozicija = req.query.kompozicija;
     const kompozicijeNote = {
