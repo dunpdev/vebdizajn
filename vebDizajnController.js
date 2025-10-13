@@ -240,6 +240,41 @@ router.get('/cvece', (req, res) => {
     res.json(cvece);
 });
 
+// kreiraj mi malo kompleksniji endpoint za algoritam pretraga stabla po dubini, vraca svaki korak sta se desava u stablu
+router.get('/pretraga-stabla-po-dubini-koraci', (req, res) => {
+    const tree = {
+        value: 1,
+        left: {
+            value: 2,
+            left: { value: 4, left: null, right: null },
+            right: { value: 5, left: null, right: null }
+        },
+        right: {
+            value: 3,
+            left: { value: 6, left: null, right: null },
+            right: { value: 7, left: null, right: null }
+        }
+    };
+    const steps = [];
+    const result = [];
+    const stack = [tree];
+    while (stack.length > 0) {
+        const node = stack.pop();
+        result.push(node.value);
+        steps.push({ action: `Visited node ${node.value}`, currentStack: [...stack.map(n => n.value)] });
+        if (node.right) {
+            stack.push(node.right);
+            steps.push({ action: `Added right child ${node.right.value} to stack`, currentStack: [...stack.map(n => n.value)] });
+        }
+        if (node.left) {
+            stack.push(node.left);
+            steps.push({ action: `Added left child ${node.left.value} to stack`, currentStack: [...stack.map(n => n.value)] });
+        }
+    }
+    res.json({ result, steps });
+});
+
+
 // kreiraj mi malo kompleksniji endpoint za algoritam pretraga stabla po sirini, vraca svaki korak sta se desava u stablu
 router.get('/pretraga-stabla-po-sirini-koraci', (req, res) => {
     const tree = {
