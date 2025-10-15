@@ -194,6 +194,18 @@ router.get('/knjige', (req, res) => {
     res.json(knjige);
 });
 
+// dodaj endpoint za davanje saveta za pisanje knjiga i romana
+router.get('/saveti-za-pisanje-knjiga', (req, res) => {
+    const saveti = [
+        "Planirajte radnju unapred.",
+        "Razvijajte likove detaljno.",
+        "Koristite dijalog za prikazivanje karaktera.",
+        "Praktikujte redovno pisanje.",
+        "Uredite i revidirajte svoj rad."
+    ];
+    res.json(saveti);
+});
+
 // dodaj endpoint za algoritam pretraga stabla po sirini
 router.get('/pretraga-stabla-po-sirini', (req, res) => {
     const tree = {
