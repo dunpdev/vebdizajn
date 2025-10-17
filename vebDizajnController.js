@@ -238,6 +238,16 @@ router.get('/egzoticne-destinacije', (req, res) => {
             kraj: "2024-08-14",
             hotel: "Four Seasons Resort Maui",
             prevoz: "Avion"
+        },
+        {
+            lokacija: "Santorini, Grčka",
+            najboljeVreme: "Maj do Oktobar",
+            atrakcije: ["Plaže", "Zalazak sunca", "Vinarije"],
+            cena: "1200-2500 USD",
+            pocetak: "2024-09-01",
+            kraj: "2024-09-10",
+            hotel: "Canaves Oia Hotel",
+            prevoz: "Avion"
         }
 
     ];
