@@ -206,6 +206,114 @@ router.get('/saveti-za-pisanje-knjiga', (req, res) => {
     res.json(saveti);
 });
 
+// dodaj endpoint za egzoticne destinacije za putovanja sa podacima o lokaciji, najboljem vremenu za posetu i glavnim atrakcijama, ceni, pocetku i kraju putovanja, hotelu i prevozu
+router.get('/egzoticne-destinacije', (req, res) => {
+    const destinacije = [
+        {
+            lokacija: "Bali, Indonezija",
+            najboljeVreme: "April do Oktobar",
+            atrakcije: ["Plaže", "Hramovi", "Rižina polja"],
+            cena: "1500-3000 USD",
+            pocetak: "2024-06-01",
+            kraj: "2024-06-15",
+            hotel: "The Mulia",
+            prevoz: "Avion"
+        },
+        {
+            lokacija: "Maldivi",
+            najboljeVreme: "Novembar do April",
+            atrakcije: ["Podvodni hoteli", "Ronjenje", "Plaže"],
+            cena: "2000-4000 USD",
+            pocetak: "2024-07-01",
+            kraj: "2024-07-10",
+            hotel: "Soneva Jani",
+            prevoz: "Avion"
+        },
+        {
+            lokacija: "Maui, Havaji",
+            najboljeVreme: "April do Oktobar",
+            atrakcije: ["Plaže", "Nacionalni parkovi", "Vodopadi"],
+            cena: "1800-3500 USD",
+            pocetak: "2024-08-01",
+            kraj: "2024-08-14",
+            hotel: "Four Seasons Resort Maui",
+            prevoz: "Avion"
+        }
+
+    ];
+    res.json(destinacije);
+});
+
+// dodaj endpoint za algoritme sortiranja nizova gde ce korisnik da posalje naziv algoritma a mi mu vratimo speudo kod i opis
+router.get('/algoritmi-sortiranja', (req, res) => {
+    const algoritmi = {
+        "Bubble Sort": {
+            opis: "Bubble Sort je jednostavan algoritam za sortiranje koji ponavljano prolazi kroz listu, poredi susedne elemente i zamenjuje ih ako su u pogrešnom redosledu.",
+            pseudoKod: `
+function bubbleSort(arr):
+    n = length(arr)
+    for i from 0 to n-1:
+        for j from 0 to n-i-2:
+            if arr[j] > arr[j+1]:
+                swap(arr[j], arr[j+1])
+            `
+        },
+        "Insertion Sort": {
+            opis: "Insertion Sort gradi konačnu sortiranu listu jedan element po jedan, uzimajući svaki element iz ulazne liste i pronalazeći odgovarajuće mesto u već sortiranoj listi.",
+            pseudoKod: `
+function insertionSort(arr):
+    n = length(arr)
+    for i from 1 to n-1:
+        key = arr[i]
+        j = i - 1
+        while j >= 0 and arr[j] > key:
+            arr[j + 1] = arr[j]
+            j = j - 1
+        arr[j + 1] = key
+            `
+        },
+        "Selection Sort": {
+            opis: "Selection Sort deli listu na sortirani i nesortirani deo, i ponavljano bira najmanji (ili najveći) element iz nesortiranog dela i dodaje ga na kraj sortiranog dela.",
+            pseudoKod: `
+function selectionSort(arr):
+    n = length(arr)
+    for i from 0 to n-1:
+        minIndex = i
+        for j from i+1 to n-1:
+            if arr[j] < arr[minIndex]:
+                minIndex = j
+        swap(arr[i], arr[minIndex])
+            `
+        },
+        "Merge Sort": {
+            opis: "Merge Sort je efikasan algoritam za sortiranje koji koristi tehniku 'podeli pa vladaj', deleći listu na polovine, sortirajući svaku polovinu i zatim ih spajajući nazad zajedno.",
+            pseudoKod: `
+function mergeSort(arr):
+    if length(arr) > 1:
+        mid = length(arr) / 2
+        leftHalf = arr[0..mid-1]
+        rightHalf = arr[mid..length(arr)-1]
+        mergeSort(leftHalf)
+        mergeSort(rightHalf)
+        merge(leftHalf, rightHalf, arr)
+            `
+        },
+        "Quick Sort": {
+            opis: "Quick Sort je efikasan algoritam za sortiranje koji koristi tehniku 'podeli pa vladaj', birajući 'pivot' element i raspoređujući ostale elemente u odnosu na njega, a zatim rekurzivno sortirajući podliste.",
+            pseudoKod: `
+function quickSort(arr, low, high):
+    if low < high:
+        pi = partition(arr, low, high)
+        quickSort(arr, low, pi - 1)
+        quickSort(arr, pi + 1, high)
+            `
+        }
+    };
+    const naziv = req.query.naziv;
+    res.json(algoritmi[naziv] || null);
+});
+
+
 // dodaj endpoint za algoritam pretraga stabla po sirini
 router.get('/pretraga-stabla-po-sirini', (req, res) => {
     const tree = {
