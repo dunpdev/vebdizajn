@@ -20,14 +20,74 @@ router.post('/login', (req, res) =>
         res.json({success: true, message: "Welcome back, " + username});
     });
 
-// Endpoint: Horoskop
+// Endpoint: Horoskop koji prima horoskopski znak kroz query parametar i vraca slucajnu poruku
 router.get('/horoskop', (req, res) => {
-    const horoscopes = [
-        "Danas je odlican dan za ljubav, ali pazite se prehlade.",
-        "Danas je dan za opustanje i uzivanje u prirodi.",
-        "Danas je dan za rad i trud, ali ne zaboravite na odmor.",
-    ];
-    res.json(randomItem(horoscopes));
+    const znak = req.query.znak;
+    const poruke = {
+        "Ovan": [
+            "Danas je dan za nove početke.",
+            "Vaša energija će biti zarazna za druge.",
+            "Budite hrabri i preuzmite inicijativu."
+        ],
+        "Bik": [
+            "Strpljenje je vaša snaga danas.",
+            "Uživajte u malim stvarima u životu.",
+            "Finansijska stabilnost je na vidiku."
+        ],
+        "Blizanci": [
+            "Komunikacija će vam doneti uspeh.",
+            "Budite otvoreni za nove ideje.",
+            "Danas je dan za druženje."
+        ],
+        "Rak": [
+            "Porodica je vaša snaga danas.",
+            "Slušajte svoje instinkte.",
+            "Brinite o sebi i svom zdravlju."
+        ],
+        "Lav": [
+            "Vaša kreativnost će biti na vrhuncu.",
+            "Budite vođa koji inspiriše druge.",
+            "Danas je dan za zabavu i radost."
+        ],
+        "Devica": [
+            "Organizacija će vam doneti mir.",
+            "Obratite pažnju na detalje.",
+            "Danas je dan za učenje nečeg novog."
+        ],
+        "Vaga": [
+            "Balans je ključ vašeg uspeha danas.",
+            "Danas je dan za donošenje važnih odluka.",
+            "Ljubav je u vazduhu."
+        ],
+        "Škorpija": [
+            "Vaša strast će vas voditi danas.",
+            "Budite iskreni prema sebi i drugima.",
+            "Danas je dan za duboke razgovore."
+        ],
+        "Strelac": [
+            "Avantura vas čeka danas.",
+            "Budite otvoreni za nova iskustva.",
+            "Danas je dan za širenje vidika."
+        ],
+        "Jarac": [
+            "Vaša disciplina će doneti rezultate.",
+            "Postavite ciljeve i radite na njima.",
+            "Danas je dan za profesionalni rast."
+        ],
+        "Vodolija": [
+
+            "Inovacija je vaša snaga danas.",
+            "Budite originalni i autentični.",
+            "Danas je dan za povezivanje sa zajednicom."
+        ],
+        "Ribe": [
+            "Vaša intuicija će vas voditi danas.",
+            "Budite kreativni i maštoviti.",
+            "Danas je dan za duhovni rast."
+        ]
+    };
+    const poruka = poruke[znak] ? randomItem(poruke[znak]) : "Niste uneli validan horoskopski znak.";
+    res.json({ znak, poruka });
 });
 
 // Endpoint: Furijeov niz
