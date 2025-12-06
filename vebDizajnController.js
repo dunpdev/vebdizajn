@@ -3095,13 +3095,11 @@ router.get('/vakNP', (req, res) => {
     const izlazak = r.izlazak.split(":");
     const ezanE = new Date(today.getFullYear(), today.getMonth(), today.getDate(), izlazak[0], izlazak[1]);
     // add 5 minutes to ezan
-    ezanE.setMinutes(ezanE.getMinutes() - 40);
+    ezanE.setMinutes(ezanE.getMinutes() - 45);
     let resp = {
-        sabah: `6:15`,
-        sabahAT: `6:15`,
         hadisi: ["\"Ne postoje dani u kojima je činjenje dobrih djela draže Allahu od ovih dana\", misleći na prvih deset dana tog mjeseca. Rekli su ashabi:\"Čak ni borba na Allahovom putu?\" Rekao je:\"Ni borba na Allahovom putu!\" A zatim je nastavio:\"Osim čovjeka koji izađe u borbu na Allahovom putu boreći se svojim tijelom i imetkom, i ne vrati ništa od toga.\" (Buharija);\"Ne postoje veličanstveniji dani kod Allaha, niti dani u kojima su dobra djela draža Allahu od ovih deset dana. Mnogo u njima Allaha spominjite et-tehlilom (izgovarajući riječi la ilahe illallah), et-tekbirom (veličanjem Allaha izgovarajući riječi Allahu ekber), et-tehmidom (zahvalom Allahu riječima elhamdulillah.)\"; Kazao je Allahov Poslanik, kada je bio upitan o postu na Dan Arefata (devetom danu zul-hidždžeta):\"Iskupljuje od grijeha prošlu i narednu godinu.\"(Muslim i dr.)"],
         sabahC: `${ezan.getHours()}:${ezan.getMinutes().toString().padStart(2, "0")}`,
-        sabahE: `${ezanE.getHours()}:${ezanE.getMinutes().toString().padStart(2, "0")}`,
+        sabahAT: `${ezanE.getHours()}:${ezanE.getMinutes().toString().padStart(2, "0")}`,
         zora: r.zora,
         izlazak: r.izlazak,
         podne: r.podne,
