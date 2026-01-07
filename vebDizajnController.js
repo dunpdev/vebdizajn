@@ -120,16 +120,29 @@ router.get('/free-softver', (req, res) => {
 
 // Endpoint: Articles
 router.get('/clanci', (req, res) => {
-    const articles = [
-        "Kako napraviti web sajt u 10 koraka",
-        "Kako napraviti web aplikaciju u 10 koraka",
-        "Kako napraviti mobilnu aplikaciju u 10 koraka",
-        "Kako napraviti desktop aplikaciju u 10 koraka",
-        "Kako napraviti igricu u 10 koraka",
-        "Kako napraviti web sajt u 10 koraka",
-
+    const clanci = [
+        {
+            naslov: "Uvod u HTML",
+            datum: "2023-10-01",
+            opis: "Naučite osnove HTML-a i kako strukturirati web stranice."
+        },
+        {
+            naslov: "Stilizovanje sa CSS-om",
+            datum: "2023-10-05",
+            opis: "Vodič za početnike o stilizovanju web stranica koristeći CSS."
+        },
+        {
+            naslov: "JavaScript za interaktivnost",
+            datum: "2023-10-10",
+            opis: "Kako koristiti JavaScript da biste dodali interaktivnost vašim web stranicama."
+        },
+        {
+            naslov: "Express.js Rutiranje",
+            datum: "2023-10-15",
+            opis: "Kako definisati rute i handlere u Express.js aplikacijama."
+        }
     ];
-    res.json(randomItem(articles));
+    res.json(clanci);
 });
 
 // Endpoint: Translation
