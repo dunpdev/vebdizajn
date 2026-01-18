@@ -1006,15 +1006,18 @@ router.get('/pisanje-knjige', (req, res) => {
 });
 
 router.get('/ekstremni-sportovi', (req, res) => {
+  // vrati mi listu ekstremnih sportova sa opisima
     const ekstremniSportovi = [
-        "Planinarenje", "Slobodno penjanje", "Biciklizam", "Padobranstvo", "Skakanje sa padobranom",
-        "Planinarenje", "Slobodno penjanje", "Biciklizam", "Padobranstvo", "Skakanje sa padobranom",
-        "Planinarenje", "Slobodno penjanje", "Biciklizam", "Padobranstvo", "Skakanje sa padobranom",
-        "Planinarenje", "Slobodno penjanje", "Biciklizam", "Padobranstvo", "Skakanje sa padobranom",
-        "Planinarenje", "Slobodno penjanje", "Biciklizam", "Padobranstvo", "Skakanje sa padobranom",
-        "Planinarenje", "Slobodno penjanje", "Biciklizam", "Padobranstvo", "Skakanje sa padobranom",
-        "Planinarenje", "Slobodno penjanje", "Biciklizam", "Padobranstvo", "Skakanje sa padobranom",
-        "Planinarenje", "Slobodno penjanje", "Biciklizam", "Padobranstvo", "Skakanje sa padobranom"
+        { Naziv: "Bungee jumping", Opis: "Skakanje sa visoke konstrukcije uz pomoc elastične trake vezane za noge." },
+        { Naziv: "Paraglajding", Opis: "Letenje sa padobranom koji se koristi kao krilo." },
+        { Naziv: "Surfovanje", Opis: "Jahanje na talasima koristeći dasku za surfovanje." },
+        { Naziv: "Skijanje na vodi", Opis: "Skijanje po vodi koristeći skije i vuču brodom." },
+        { Naziv: "Planinsko biciklizam", Opis: "Vožnja bicikla po neravnom terenu i planinskim stazama." },
+        { Naziv: "Base jumping", Opis: "Skakanje sa visokih objekata koristeći padobran." },
+        { Naziv: "Kitesurfing", Opis: "Vožnja na dasci po vodi koristeći zmaja za vuču." },
+        { Naziv: "Rafting", Opis: "Spustanje niz reku u gumenom čamcu." },
+        { Naziv: "Skakanje padobranom", Opis: "Skočiti iz aviona i otvoriti padobran tokom pada." },
+        { Naziv: "Wingsuit flying", Opis: "Letenje koristeći specijalno odelo koje omogućava klizanje kroz vazduh." }
     ];
     res.json(ekstremniSportovi);
 });
