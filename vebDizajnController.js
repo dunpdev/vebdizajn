@@ -1022,6 +1022,57 @@ router.get('/ekstremni-sportovi', (req, res) => {
     res.json(ekstremniSportovi);
 });
 
+// nekoliko vesti iz hakerskog sveta podeli u objekte sa datumom, naslovom i opisom
+router.get('/hakerske-vesti', (req, res) => {
+    const hakerskeVesti = [
+        {
+            Datum: "2024-01-15",
+            Naslov: "Novi ransomware napad na globalne kompanije",
+            Opis: "Grupa hakera lansirala je novi ransomware napad koji je pogodio više globalnih kompanija, zahtevajući otkupninu u kriptovaluti."
+        },
+        {
+            Datum: "2024-02-10",
+            Naslov: "Otkrivena velika sigurnosna rupa u popularnom softveru",
+            Opis: "Istraživači su otkrili ozbiljnu sigurnosnu rupu u popularnom softveru koja omogućava hakerima da preuzmu kontrolu nad sistemima korisnika."
+        },
+        {
+            Datum: "2024-03-05",
+            Naslov: "Hakerska grupa objavila nove alate za napade",
+            Opis: "Poznata hakerska grupa objavila je nove alate koji olakšavaju izvođenje sofisticiranih napada na ciljeve širom sveta."
+        },
+        {
+            Datum: "2024-04-20",
+            Naslov: "Vlada uvodi nove mere za borbu protiv sajber kriminala",
+            Opis: "Nakon niza hakerskih napada, vlada je najavila nove mere i zakone kako bi se efikasnije borila protiv sajber kriminala."
+        }
+    ];
+    res.json(hakerskeVesti);
+});
+
+// vrati listu o svim tipovima AI agenata sa nazivom i opisom
+router.get('/ai-agenti', (req, res) => {
+    const aiAgenti = [
+        { Naziv: "Chatbot", Opis: "AI agent dizajniran za vođenje razgovora sa korisnicima putem tekstualnih ili glasovnih interfejsa." },
+        { Naziv: "Virtualni asistent", Opis: "AI agent koji pomaže korisnicima u obavljanju zadataka kao što su upravljanje kalendarom, slanje poruka i pretraživanje informacija." },
+        { Naziv: "Preporučivač", Opis: "AI agent koji analizira korisničke podatke kako bi pružio personalizovane preporuke proizvoda, usluga ili sadržaja." },
+        { Naziv: "Autonomni vozilo", Opis: "AI agent koji koristi senzore i algoritme za navigaciju i upravljanje vozilom bez ljudske intervencije." },
+        { Naziv: "Pametni kućni uređaji", Opis: "AI agenti ugrađeni u kućne uređaje koji omogućavaju automatizaciju i daljinsko upravljanje putem aplikacija." }
+    ];
+    res.json(aiAgenti);
+});
+
+// vrati mi listu retkih ptica sa nazivom i opisom i gde se mogu naci
+router.get('/retke-ptice', (req, res) => {
+    const retkePtice = [
+        { Naziv: "Kakapo", Opis: "Noćna, neleteća papagajska ptica iz Novog Zelanda.", Lokacija: "Novog Zelanda" },
+        { Naziv: "Harpy orao", Opis: "Jedan od najvećih i najmoćnijih orlova na svetu.", Lokacija: "Tropske šume Centralne i Južne Amerike" },
+        { Naziv: "Shoebill", Opis: "Velika ptica sa karakterističnim kljunom u obliku cipele.", Lokacija: "Vlažne oblasti Centralne Afrike" },
+        { Naziv: "California condor", Opis: "Najveća kopnena ptica u Severnoj Americi.", Lokacija: "Zapadna obala SAD-a" },
+        { Naziv: "Spoon-billed sandpiper", Opis: "Mala ptica sa karakterističnim kašikom u obliku kljuna.", Lokacija: "Obalne oblasti jugoistočne Azije" }
+    ];
+    res.json(retkePtice);
+});
+
 router.get('/bastovanstvo', (req, res) => {
     const savetiZaBastovanstvo = [
         {
