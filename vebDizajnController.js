@@ -583,20 +583,20 @@ router.get('/vreme-za-molitvu', (req, res) => {
     };
     res.json(vremeZaMolitvu[lokacija] || null);
 });
-
+// kreiraj mi endpoint za azil za pse koji vraca listu slika pasa koji su na usvajanju sa ispravnim slikama
 router.get('/azil-za-pse', (req, res) => {
-    const psi = [
-        "https://www.pexels.com/photo/short-coated-tan-dog-33534/",
-        "https://www.pexels.com/photo/short-coated-tan-dog-33534/",
-        "https://www.pexels.com/photo/short-coated-tan-dog-33534/",
-        "https://www.pexels.com/photo/short-coated-tan-dog-33534/",
-        "https://www.pexels.com/photo/short-coated-tan-dog-33534/",
-        "https://www.pexels.com/photo/short-coated-tan-dog-33534/",
-        "https://www.pexels.com/photo/short-coated-tan-dog-33534/",
-        "https://www.pexels.com/photo/short-coated-tan-dog-33534/",
-        "https://www.pexels.com/photo/short-coated-tan-dog-33534/",
-        "https://www.pexels.com/photo/short-coated-tan-dog-33534/"
-    ];
+  const psi = [
+      { ime: "Rex", slika: "https://i.guim.co.uk/img/media/fe1e34da640c5c56ed16f76ce6f994fa9343d09d/0_174_3408_2046/master/3408.jpg?width=620&dpr=2&s=none&crop=none" },
+      { ime: "Bella", slika: "https://animalwelfaresociety.org/wp-content/uploads/2025/03/awsmaine_peachesDOG_0325-scaled-e1742240776863.jpg" },
+      { ime: "Max", slika: "https://animalwelfaresociety.org/wp-content/uploads/2025/03/awsmaine_cleoDOG_0325-1536x1024.jpg" },
+      { ime: "Luna", slika: "https://atlantahumane.org/wp-content/uploads/2025/11/dog-hero.jpg" },
+      { ime: "Charlie", slika: "https://hips.hearstapps.com/ghk.h-cdn.co/assets/17/30/dachshund.jpg?crop=1.00xw:0.668xh;0,0.260xh" },
+      { ime: "Lucy", slika: "https://hips.hearstapps.com/hmg-prod/images/shibainu-dog-royalty-free-image-1752089989.pjpeg?crop=1xw:1xh;center,top" },
+      { ime: "Cooper", slika: "https://hips.hearstapps.com/hmg-prod/images/golden-retriever-relaxing-at-home-royalty-free-image-1752090274.pjpeg?crop=0.534xw:0.801xh;0.301xw,0.199xh" },
+      { ime: "Daisy", slika: "https://hips.hearstapps.com/hmg-prod/images/cute-corgi-posing-in-between-its-owners-legs-royalty-free-image-1752090062.pjpeg?crop=0.66672xw:1xh;center,top" },
+      { ime: "Buddy", slika: "https://hips.hearstapps.com/hmg-prod/images/happy-husky-dog-laying-down-beside-owner-royalty-free-image-1752090333.pjpeg?crop=0.670xw:1.00xh;0.0415xw,0" },
+      { ime: "Molly", slika: "https://hips.hearstapps.com/hmg-prod/images/poodle-strolling-through-the-park-on-the-grass-royalty-free-image-1752091328.pjpeg?crop=0.573xw:0.860xh;0.226xw,0.124xh" }
+  ];
     res.json(psi);
 });
 
