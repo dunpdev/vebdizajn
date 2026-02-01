@@ -3126,13 +3126,37 @@ router.get('/autoskola', (req, res) => {
     res.json(znaci);
 });
 
+// kreiraj rutu za vestacku inteligenciju koja ce vratiti opis algoritma i gde se on koristi
 router.get('/vestacka-inteligencija', (req, res) => {
-    let algoritmi = {
-        "DFS": "Opis algoritma DFS, Pseudo kod",
-        "BFS": "Opis algoritma BFS, Pseudo kod",
-        "Dijkstra": "Opis algoritma Dijkstra, Pseudo kod",
-        "A*": "Opis algoritma A*, Pseudo kod"
-    };
+    let algoritmi = [
+      {
+        name: "Neuronske mreže",
+        description: "Neuronske mreže su inspirisane strukturom ljudskog mozga i koriste se za prepoznavanje obrazaca, klasifikaciju i regresiju. One se sastoje od slojeva povezanih čvorova (neurona) koji obrađuju informacije.",
+        applications: [
+          "Prepoznavanje slika i govora",
+          "Medicinska dijagnostika",
+          "Finansijska predviđanja"
+        ]
+      },
+      {
+        name: "Mašinsko učenje",
+        description: "Mašinsko učenje omogućava računarima da uče iz podataka bez eksplicitnog programiranja. Algoritmi mašinskog učenja mogu biti nadgledani, nenadgledani ili pojačani.",
+        applications: [
+          "Preporučivači proizvoda",
+          "Detekcija prevara",
+          "Analiza sentimenta"
+        ]
+      },
+      {
+        name: "Duboko učenje",
+        description: "Duboko učenje je podgrupa mašinskog učenja koja koristi višeslojne neuronske mreže za modeliranje složenih obrazaca u velikim skupovima podataka.",
+        applications: [
+          "Automatsko prevođenje",
+          "Autonomna vozila",
+          "Generisanje teksta i slika"
+        ]
+      }
+    ];
     res.json(algoritmi);
 });
 
