@@ -2828,11 +2828,11 @@ router.get('/cezarova-sifra', (req, res) => {
 router.get('/transpozicioni-sifra', (req, res) => {
     const tekst = req.query.tekst;
     const kljuc = parseInt(req.query.kljuc);
-    let sifrat = "";
-    for (let i = 0; i < tekst.length; i += kljuc) {
-        sifrat += tekst.substring(i, i + kljuc);
+    let sifrat = new Array(kljuc).fill("");
+    for (let i = 0; i < tekst.length; i++) {
+        sifrat[i % kljuc] += tekst[i];
     }
-    res.json(sifrat);
+    res.json(sifrat.join(""));
 });
 
 router.get('/stanovi', (req, res) => {
