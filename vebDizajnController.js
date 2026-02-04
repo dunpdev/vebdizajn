@@ -6921,7 +6921,7 @@ router.get('/vak', (req, res) => {
   let resp = {
     sabah: `6:15`,
     sabahS: `6:15`,
-    sabahN: `6:15`,
+    sabahN: `6:00`,
     sabahV: `6:15`,
     sabahA: `6:00`,
     hadisi: ["One koji, ako im damo vlast (i moć) na Zemlji, uspostavljaju (i obavljaju) namaz i daju zekat, i naredjuju dobro, a odvraćaju od nevaljalog. A Allahovo je okončanje stvari. (Sura El–Hadždž, 41. ajet); I klanjajte namaz i dajte zekat; a šta unaprijed pripremite za duše vaše od hajra, naći ćete ga kod Allaha. Zaista, Allah dobro vidi ono šta radite. (Sura El-Beqare, 110. ajet) A mu'mini i mu'minke su prijatelji jedni drugima: naređuju da se čine dobra djela, a zabranjuju činjenje nevaljalih djela, i namaz obavljaju... (Sura Et-Tewbe, 71. ajet) Prenosi Džundub b. Sufjan El-Bedželi, radijallahu 'anhu, da je Resulullah, sallallahu 'alejhi ve sellem, rekao: „Ko klanja sabah-namaz, on je pod Allahovom zaštitom, pa zato budite pažljivi prema takvoj osobi (kako je ne bi povrijedili).\" (Hadis bilježi imam Ahmed - Hadis bilježi imam Muslim)"],
