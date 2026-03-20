@@ -6920,7 +6920,7 @@ router.get('/vak', (req, res) => {
   ezanE.setMinutes(ezanE.getMinutes() - 40);
   let resp = {
     sabah: `5:00`,
-    sabahS: `${ezan.getHours()}:${ezan.getMinutes().toString().padStart(2, "0")}`,
+    sabahS: `4:45`,
     sabahN: `5:00`,
     sabahV: `5:15`,
     sabahA: `4:45`,
